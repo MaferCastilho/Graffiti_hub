@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+body{
+    background-color: black;
+    color: white; 
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Ocupa a altura total da viewport */
+    margin: 0;
+}
+h1{
+    font-family: "Permanent Marker";
+    font-size: 50px;
+    text-align: center;
+}   
+#borda{
+    border-right: 7px solid blue;
+}   
+#borda2{
+    border-left: 7px solid blue;
+}
+table{
+    border-collapse: collapse;
+    margin: auto;
+}  
+th, td{
+    padding: 10px;
+    width: 120px;
+}
+th{
+    font-weight: bold;
+}
+label{
+    font-size: 25px;
+    text-align: left;
+    font-family: "Permanent Marker";
+}
+input{
+    width: 300px;
+    border-radius: 5px;
+    height: 30px;
+    color: black;
+}
+img{
+    width: 400px;
+}
+button{
+    background-color: rgb(86, 174, 247);
+    color: white;
+    width: 310px;
+    border-radius: 5px;
+    height: 40px;
+}
+h3{
+    font-family: "Permanent Marker";
+    text-align: center;
+    color: rgb(86, 186, 243);
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    position: relative; /* Para permitir posicionamento absoluto dentro do body */
+}
+h1{
+    color: white;
+}
+
+.trilho{
+    width: 100px; /* Diminuir o tamanho */
+    height: 50px;
+    background-color: rgb(53, 51, 51);
+    border-radius: 50px;
+    position: absolute;
+    bottom: 20px; /* Posicionar no canto inferior */
+    left: 20px;   /* Alinhar à esquerda */
+    cursor: pointer;
+}
+
+.trilho .indicador{
+    width: 45px; /* Ajustar tamanho do indicador */
+    height: 50px;
+    background-color: black;
+    border-radius: 50%;
+    transform: scale(.9);
+    position: absolute;
+    left: 0;
+    transition: .5s;
+}
+
+.trilho.dark{
+    background-color: rgb(156, 152, 152);
+}
+
+.trilho.dark .indicador{
+    left: 60px; /* Ajustar a nova posição do indicador */
+    background-color: white;
+}
+
+body.dark{
+    background-color: rgb(196, 189, 189);
+}
+
+body.dark h1{
+    color: black;
+}
+
+h2{
+    font-family: "Permanent Marker";
+    text-align: left; /* Alinha o texto à esquerda */
+    position: absolute; /* Posiciona o elemento de forma absoluta */
+    top: 20px; /* Define a posição no topo */
+    left: 20px; /* Define a posição à esquerda */
+}
