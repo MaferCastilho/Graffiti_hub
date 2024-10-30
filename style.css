@@ -9,16 +9,16 @@ body{
     height: 100vh; /* Ocupa a altura total da viewport */
     margin: 0;
 }
-h1{
+h1{ 
     font-family: "Permanent Marker";
     font-size: 50px;
     text-align: center;
 }   
 #borda{
-    border-right: 7px solid blue;
+    border-right: 7px solid rgb(48, 241, 216);
 }   
 #borda2{
-    border-left: 7px solid blue;
+    border-left: 7px solid rgb(49, 231, 231);
 }
 table{
     border-collapse: collapse;
@@ -69,50 +69,149 @@ body{
 h1{
     color: white;
 }
-
 .trilho{
-    width: 100px; /* Diminuir o tamanho */
-    height: 50px;
+    width: 80px; /* Diminuir o tamanho */
+    height: 30px;
     background-color: rgb(53, 51, 51);
     border-radius: 50px;
     position: absolute;
-    bottom: 20px; /* Posicionar no canto inferior */
-    left: 20px;   /* Alinhar à esquerda */
+    bottom: 10px; /* Posicionar no canto inferior */
+    left: 10px;   /* Alinhar à esquerda */
     cursor: pointer;
+    z-index: 9999;
+    position: fixed;
 }
 
 .trilho .indicador{
-    width: 45px; /* Ajustar tamanho do indicador */
-    height: 50px;
+    width: 30px; /* Ajustar tamanho do indicador */
+    height: 30px;
     background-color: black;
     border-radius: 50%;
     transform: scale(.9);
     position: absolute;
-    left: 0;
-    transition: .5s;
+    left: 5;
+    transition: 500ms;
+    transition-property: background-color;
+    position: fixed;
 }
 
 .trilho.dark{
-    background-color: rgb(156, 152, 152);
+    background-color: #a7a4a4;
 }
 
 .trilho.dark .indicador{
-    left: 60px; /* Ajustar a nova posição do indicador */
-    background-color: white;
+    left: 62px; /* Ajustar a nova posição do indicador */
+    background-color: rgb(238, 238, 238);
 }
 
 body.dark{
-    background-color: rgb(196, 189, 189);
+    background-color: rgb(255, 253, 253);
 }
 
-body.dark h1{
+body.dark{
     color: black;
 }
 
 h2{
     font-family: "Permanent Marker";
-    text-align: left; /* Alinha o texto à esquerda */
+    text-align: center; /* Alinha o texto à esquerda */
     position: absolute; /* Posiciona o elemento de forma absoluta */
     top: 20px; /* Define a posição no topo */
-    left: 20px; /* Define a posição à esquerda */
+}
+.topo {
+    width: 100%;
+    height: 12%;
+    text-align: center;
+    background: #decae7;
+    color: #fff;
+    font-size: 10px;
+    position: fixed; /* Fixa no topo da tela */
+    top: 0; /* Posiciona no topo (0px de distância do topo da tela) */
+    z-index: 1000; /* Garante que ele esteja acima de outros elementos */
+    border: solid, rgb(0, 0, 0);
+    border-radius: 5px;
+    border-width: 1px;
+}
+footer{
+    background: #decae7;
+    position: fixed;
+    width: 99.5%;
+    bottom: 0;
+    text-align: center;
+    z-index: 1;
+    border: solid, rgb(0, 0, 0);
+    border-radius: 5px;
+    border-width: 1px;
+
+}
+main{
+    flex: 1;
+}
+
+main, footer{
+    padding: 5px;
+}
+
+body, html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body.dark{
+    background-color: rgb(255, 253, 253);
+}
+
+body.dark{
+    color: black;
+}
+span {
+    width: 200px; /* Defina a largura conforme necessário */
+    height: 300px; /* Defina a altura conforme necessário */
+    position: fixed; /* Mantém a imagem fixa na tela */
+    top: -40px; /* Mova a imagem para cima (valor negativo) */
+    left: 0; /* Alinhar à esquerda */
+    z-index: 1000; /* Garante que a imagem fique acima de outros elementos */
+}
+footer i {
+    font-size: 25.7px; /* Define o tamanho dos ícones conforme necessário */
+    margin: 10px; /* Espaçamento entre os ícones */
+}
+
+/* Inicio rolagem */
+
+a {
+    display: inline-block;
+    width: 50px;
+    text-decoration: none;
+  }
+  nav,
+  scroll-container {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+  nav {
+    width: 339px;
+    padding: 5px;
+    border: 1px solid black;
+  }
+  scroll-container {
+    display: block;
+    width: 350px;
+    height: 200px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }
+  scroll-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 5em;
+}
+::placeholder{
+    font-family: "Permanent Marker";
+    color: black;
+    text-align: center;
 }

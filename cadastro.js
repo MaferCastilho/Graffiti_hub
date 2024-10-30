@@ -1,12 +1,13 @@
 // Verificação tela de Cadastro
 function validarFormulario() {
     // Obter os valores dos campos
+    var username = document.querySelector('input[type="text"]').value.trim();
     var nome = document.querySelector('input[type="text"]').value.trim();
     var email = document.querySelector('input[type="email"]').value.trim();
     var senha = document.querySelector('input[type="password"]').value.trim();
 
     // Verificar se os campos estão preenchidos
-    if (nome === '' || email === '' || senha === '') {
+    if (username === '' || nome === '' || sobrenome === '' || email === '' || senha === '' || dataNasc === '') {
         alert('Por favor, preencha todos os campos.');
         return;
     }
